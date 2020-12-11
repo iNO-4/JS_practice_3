@@ -45,4 +45,31 @@
 <!--
 [要素のコンテンツを書き換えるtextContent]
 取得したHTMLの要素のコンテンツを書き換えるには、次のように記述する。
+document.getElementById('id名').textContent = 書き換えたい文字列;
+
+今回は「書き換えたい文字列」を現在日時にしたが、通常のテキスト(文字列)で書き換えたい場合はシングルクォートで囲む。
+
+コンテンツを文字列で書き換える例
+document.getElementById('choice').textContent = '通知を受け取りますか？';
+-->
+
+<!--
+[textContentは「プロパティ」〜オブジェクトの状態を表す]
+windowやdocumentなど、全てのオブジェクトは、メソッド以外に「プロパティ」を持っている。
+オブジェクトのプロパティとは、そのオブジェクトの状態を表すもの。
+
+◯◯オブジェクトの□□は⭐︎⭐︎である
+○◯オブジェクトの□□を⭐︎⭐︎にする
+と言い表せるようなものがあるとき、□□を「プロパティ」、⭐︎⭐︎を「プロパティの値」という。
+プロパティの値は一般的に、読み取りと書き換えが可能である。
+textContentは「document.getElementById('choice')」で取得した要素の「コンテンツ」を表すプロパティ。
+
+document.getElementById('choice').textContent = new Date();
+これを先ほどの文章に当てはめてみると、
+<p id="choice"></p>のtextContentをnew Date()にする
+ということになる。<p id="choice"></p>のtextContentプロパティを書き換えているということ。
+
+[Elementオブジェクト]
+「document.getElementById('id名')」で取得した要素は、Elementオブジェクトという、独自のメソッドとプロパティを持つオブジェクトとして扱われる。
+textContentは、Elementオブジェクトに用意されているプロパティ。
 -->
