@@ -1,0 +1,79 @@
+<!--
+[入力内容に応じて動作を変更する]〜変数、定数
+「プロンプト」と呼ばれる、テキストフィールドを持つダイアログボックスを表示する。
+プロンプトはユーザが入力したテキストをリターンとして返してくるので、今回はそのリターンを一旦保存する。
+そして、保存したテキストがもし「yes」なら、別のダイアログを表示し、それ以外なら何もしない。
+データの保存には「変数」を使う。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-02_let-const</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>入力内容に応じて動作を確認する</h1>
+				<h2>クリックされたボタンの結果を変数に保存する</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+			let answer = window.prompt('ヘルプを見ますか？');
+			console.log(answer);
+		</script>
+	</body>
+</html>
+
+<!--
+[promptメソッド]
+promptは、alert、confirmと同じくwindowオブジェクトのメソッド。
+()のテキスト、もしくは数式の計算結果などのメッセージと、ユーザがテキストを入力できる
+テキストフィールドが一緒に表示されるようになっている。
+このテキストフィールドに入力した内容は、ユーザが「OK」をクリックした時にだけ、リターンが返ってくる。
+「キャンセル」をクリックしても何も起こらない。
+記述 : window.prompt(メッセージ)
+-->
+
+<!--
+[変数とは]
+3-01_ifでは、confirmメソッドのリターンをそのままif文の条件式に使っていた。
+得られたデータ(confirmメソッドの場合はtrueかfalse)をその場ですぐに利用する場合はそれでよいが、
+ときにはそうしたデータを後の処理に使いたいこともある。
+ある行で得られたデータ、今回のサンプルでいえばpromptメソッドのリターンの内容を次の行以降でも使いたい場合は、
+そのデータを保存しておく必要がある。その保存のために使うのが「変数」。
+変数の使い方には以下のようなパターンがある。
+１   変数を「定義する」
+２   変数にデータを「代入する」
+３-a 変数からデータを「読み取る」
+３-b 変数のデータを「書き換える」
+3-aと3-bは順序が入れ替わることがあり、3-bは一度もしないようなプログラムもあるが、
+だいたいこの順序で処理をする。
+
+[１ 変数を「定義する」]
+何かデータを保存したいときは、まず変数を定義する。今回書いたプログラムでは、
+次の部分で変数を定義している。
+「let answer」
+このコードの場合、「answerという名前の変数」を定義していることになる。
+letに続けて半角スペース、その後に変数の名前(変数名)を書けば、その変数名を持つ定数が定義できる。
+変数名のつけ方には多少の条件はあるが、自分で好きにつけることができる。
+
+[]
+-->
