@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>03-01_if</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>確認ダイアログボックスを表示する</h1>
+				<h2>クリックされたボタンでメッセージを変える</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+					<p>ゲームの進行はコンソールで確認</p>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+			if(window.confirm('ゲームスタート！準備はいい？')) {
+				console.log('ゲームを開始します。');
+			} else {
+				console.log('ゲームを終了します。');
+			}
+		</script>
+	</body>
+</html>
+
+<!--
+[if文]
+if文は、()内がtrueのとき、その次の{~}に書かれたプログラムを実行する。
+また、()内がfalseのとき、else以降の{~}に書かれたプログラムを実行する。
+書式：
+if(条件式)　{
+	条件式がtrueになる時に実行する処理
+} else {
+	条件式がfalseになる時に実行する処理
+}
+
+まずは()内に書かれていた時の動作を確認する。
+()内に初めからtrueやfalseを書いてしまうと、処理は分岐されない。
+しかし、先程の記述のように「window.confirm('ゲームスタート！準備はいい？')」と書いておけば、
+ユーザが「OK」や「キャンセル」をクリックするかによって、if文の()内にtrueが入るか、falseが入ってくるか変わる。
+-->
