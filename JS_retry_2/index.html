@@ -1,0 +1,72 @@
+<!--
+[JavaScriptの文法と基本的な機能]
+-->
+
+<!--
+[確認ダイアログボックスを表示する]〜条件分岐(if)
+「もし〜なら」「もし〜でないなら」というように、ある条件が成り立つかどうかで動作を変えるのがif文。
+今回のサンプルでは、クリックされたのが「OK」なのか、それとも「キャンセル」なのかを評価して、その後の動作を変えるのにif文を使う。
+正しいif文を書くためには「条件」を設定する必要がある。
+条件の設定に必要なブール値(true/false)について理解してから、実際にif文を書くことにする。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-01_if</title>
+		<link href="../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>確認ダイアログボックスを表示する</h1>
+				<h2>確認ダイアログボックスを使ってみよう</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+			console.log(window.confirm('ゲームスタート！準備はいい？'));
+		</script>
+	</body>
+</html>
+
+<!--
+確認ダイアログボックスを表示するには、windowオブジェクトのconfirmメソッドを使う。
+使い方はalertメソッドと同じで、()内にダイアログウィンドウに表示したいメッセージを入れておく。
+書式 : window.confirm(メッセージ)
+-->
+
+<!--
+[リターン]
+windowオブジェクトのconfirmメソッドには、alertメソッドにはない特徴的な機能がある。
+それは、ダイアログを表示するだけでなく「リターン」を返してくる、ということ。
+confirmメソッドの役目は「ダイアログを出し、ユーザに「OK」か「キャンセル」をクリックさせること」。
+ユーザがどちらかのボタンをクリックしたときにconfirmメソッドの役目は終了する。
+役目が終了するときにconfirmメソッドはリターンとしてtrueまたはfalseという値を返してくる。
+リターンが返ってくると、元々は「window.confirm('ゲームスタート！準備はいい？')」と書かれていた部分が、
+リターンで返ってきた値(trueまたはfalse)に置き換わる。
+つまり、結果的に「console.log(true);」または「console.log(false);」と書いていたのと同じ動作をする。
+-->
+
+<!--
+[trueとfalse]
+confirmメソッドのリターン値は、必ずtrueかfalseのいずれか。
+このtrue、falseの両方を合わせてブール値(またはブーリアン値)という。
+if文や繰り返し文など、条件によって動作が変わるものはほぼ全て、このブール値がtrueなのかfalseなのかを評価して、
+次に実行する処理を決定する。
+-->
