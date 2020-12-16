@@ -1,0 +1,61 @@
+<!--
+[定数を使ってデータを書き換えられないようにする]
+一度定義したらデータを書き換えられない変数を作ることもでき、それを「定数」と呼ぶ。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-02_let-const</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>入力内容に応じて動作を変更する</h1>
+				<h2>定数を使ってデータを書き換えられないようにする</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+					<p>ブラウザのコンソールを開く。</p>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+			const answer = window.prompt('ヘルプを見ますか？');
+			console.log(answer);
+			// answer = 'no';
+			// console.log(answer);
+		</script>
+	</body>
+</html>
+
+<!--
+ブラウザでテキスト入力後、コンソール確認をすると、エラーが表示されている。
+ブラウザによってメッセージが異なるが、どれも「定数を書き換えようとしてるけど、書き換えられない」
+というような意味のことを言っている。つまり、定数を書き換えるとエラーが起きてしまう。プログラムの実行もそこで終了する。
+-->
+
+<!--
+[定数]
+「定数」とは、定義したときに代入したデータを後から書き換えることができない、変数の一種。
+不用意に書き換えてはいけないデータを保存しておくときは定数を使う。
+定数を定義するときは、変数を定義するときに使用した「let」の代わりに「const」を使う。
+後からデータを書き換えられないため、定数は定義すると同時に代入する。
+
+書式 : const answer = window.prompt('ヘルプを見ますか？');
+
+後からデータを書き換えられないことと、定義の際に「const」を使うこと以外の使い方や定数名のつけ方のルールは変数と同じ。
+-->
