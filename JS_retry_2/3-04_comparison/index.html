@@ -1,0 +1,74 @@
+<!--
+[数当てゲーム「比較演算子、データ型」]
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>comparison</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>数当てゲーム</h1>
+				<h2>様々な比較演算子を利用する</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+
+			const number = Math.floor(Math.random() * 6);
+			const answer = parseInt(window.prompt('数当てゲーム。0〜5の数字を入力してね。'));
+			let message;
+			if(answer === number) {
+				message = 'あたり！';
+			} else if(answer < number) {
+				message = '残念でした！もっと大きい';
+			} else if(answer > number) {
+				message = '残念でした！もっと小さい';
+			} else {
+				message = '0〜5の数字を入力してね。';
+			}
+			window.alert(message);
+		</script>
+	</body>
+</html>
+
+<!--
+今回書いたプログラムを確認する。
+36行目では、ランダムで0~5までの整数を生成して、それを定数numberに代入している。
+つまり、定数numberには、0,1,2,3,4,5のいずれかの数字が保存されていることになる。
+ここでは、Math.randomは、ランダムな数字を発生させるメソッドということを押さえておく。
+37行目ではプロンプトを表示して、入力されたテキストを定数answerに代入している。
+ただし、入力されたテキストをそのままanswerに代入するのではなく、
+parseaIntメソッドを使って一旦、整数に変換してから代入している。
+書式 : parseInt(変換したい文字列)
+-->
+
+<!--
+[今回の定義についての確認]
+今までの実習では、変数を定義すると同時にデータを代入していた。
+今回は、先に変数messageを定義だけしておいて、データの代入は後から行っていく。
+変数を定義しているのは、38行目の「let message;」。
+
+letに続けて変数名、そのすぐ後に終了のセミコロンを書くと、データを代入せずに変数の定義だけをすることができる。
+変数に初期値のようなものがない場合や、今回のようにif文などで代入されるデータが変わる場合には、
+先に変数の定義だけをすることがある。
+書式 : let 変数名;
+-->
