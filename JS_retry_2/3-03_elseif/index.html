@@ -1,0 +1,71 @@
+<!--
+[動作のバリエーションを増やす「条件分岐(else if)」]
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-03_elseif</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>動作のバリエーションを増やす</h1>
+				<h2>noかどうかを判断する</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict'
+
+			const answer = window.prompt('ヘルプを見ますか？');
+			if(answer === 'yes') {
+				window.alert('タップでジャンプ、障害物を避けます。');
+			} else if(answer === 'no') {
+				window.alert('ゲーム起動中...');
+			} else {
+				window.alert('yesかnoでお答えください。');
+			}
+		</script>
+	</body>
+</html>
+
+<!--
+[else if]
+ifの条件式がfalseになると、else以降が実行される。elseの後ろにまた別のifを付け加えることができる。
+
+if(①answer === 'yes') {
+	処理Ⅰ...
+} else if(②answer === 'no') {
+	処理Ⅱ...
+} else {③
+	処理Ⅲ...
+}
+
+まず①の条件式が評価される。定数answerに保存されているデータが'yes'かどうかを判断して、
+その評価結果がtrueであれば続く{~}の処理Ⅰが実行される。
+falseであればelse以降に進む。ここにもifがあって、今度は②の条件式が評価される。
+②の条件式には、定数answerに保存されているデータが'no'であれば、評価結果がtrueになる。
+ということで、②の条件式がtrueなら、処理Ⅱが実行される。
+falseなら次のelse以降に進むが、もうif文はないので、処理Ⅲが実行される。
+今回は2つのif文で３種類の処理を振り分けている。if文は好きなだけ追加することができ、
+いくらでも処理を振り分けることができる。
+なお、else ifには動作を考える上で重要な特徴がある。
+ifやelse ifは上から順に、条件を満たすかどうか１つずつ評価されていくが、どこかで条件を満たすと、
+それ以降のelse ifには進まないようになっている。
+-->
