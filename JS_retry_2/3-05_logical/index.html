@@ -1,0 +1,82 @@
+<!--
+[時間で異なるメッセージを表示する]〜論理演算子
+ここまでのif文では、「◯◯が△△だったら」や「××が□□より大きかったら」という形の条件式を書いてきた。
+「時刻が19時以降で、かつ21時より前」や「9時台、もしくは15時台」というような条件式はどう書くのか。
+今回は、2つ以上の条件式からなる1つの条件式を設定して、ページを開いたときの時間によって異なるメッセージを
+表示させてみる。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-05_logical</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>時間で異なるメッセージを表示する</h1>
+				<h2>2つ以上の条件式で1つの条件を作る</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+
+			const hour = new Date().getHours();
+
+			if(hour >= 19 && hour < 21) {
+				window.alert('お弁当30%OFF!');
+			} else if(hour === 9 || hour === 15) {
+				window.alert('お弁当1個買ったら1個おまけ!');
+			} else {
+				window.alert('お弁当はいかがですか?');
+			}
+		</script>
+	</body>
+</html>
+
+<!--
+[複数の条件式を使って1つの条件を作る]
+
+・&&演算子
+まず、お弁当が30%OFFになるという条件は、時刻が19時以降21時までということになっている。
+つまり、定数hourに保存されている値が次の条件を満たすとき。
+「定数hourの値が 19以上 かつ 21より小さい」
+この条件が成り立つためのif文が42行目にあたる。
+「if (hour >= 19 && hour < 21) {」
+&&は、「左側の条件式がtrue、かつ右側の条件式もtrue」になるとき、全体の評価結果がtrueになる。
+この&&より左側の条件式は「hour >= 19」となっている。
+つまり、「変数hourに保存されている値が19以上のとき」trueになる。
+また、&&より右側の条件式は「hour < 21」。こちらは、「定数hourが21より小さいとき」trueになる。
+この2つの条件式が両方ともtrueになるとき、全体の評価結果がtrueになって、続く{~}が実行される。
+/書式「条件1 && 条件2」
+
+
+・||演算子
+次に、お弁当を1個買ったら1個おまけになる条件は、時刻が9時もしくは15時のとき。
+つまり、定数hourの値が次の条件を満たすとき。
+「定数hourの値が 9 もしくは 15」
+この条件が成り立つかどうかを調べているif文は、44行目のelse以降のif文。
+「} else if(hour === 9 || hour === 15) {」
+||は、「左側の条件式、もしくは右側の条件式、少なくともどちらか片方がtrue」になるとき、
+全体の評価結果がtrueになる。
+この44行目のif文の場合、定数hourに保存されている値が「9もしくは15」のときtrueになる。
+そして、全体の評価結果がtrueになれば続く{~}が実行され、
+「お弁当1個買ったら1個おまけ!」と書かれたダイアログボックスが表示される。
+/書式「条件式1 || 条件式2」
+-->
