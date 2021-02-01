@@ -1,0 +1,62 @@
+<!--
+[文字列同士を連結する]
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-06_while</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>1枚、2枚、3枚…と出力する</h1>
+				<h2>文字列同士を連結する</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict'
+
+			let i = 1;
+			while(i <= 10) {
+				console.log(i + '枚');
+				i += 1;
+			}
+		</script>
+	</body>
+</html>
+
+<!--
+[文字列連結]
++には、数字と数字を足し合わせるのに加えてもう一つ、
+文字列と文字列を繋げて新しい文字列を作る機能がある。これを「文字列連結」という。
+今回、logメソッドのパラメータは次のように記述した。
+・console.log(i + '枚')
+すると、変数iの値(1、2、3…)と「枚」が連結されて、コンソールへ出力される。
++は、その前と後ろが数値のときだけ、足し算として機能する。
+それ以外の場合は文字列連結として機能する。
+
+[+=演算子]
+今回使用した「+=」は「左の数値に右の数値を足して、結果を左側に代入する」という意味の演算子。
+変数iの値が１のとき、右側の１が足されて２になり、その値が変数iに代入される。
+/書式 : 元の数値(変数) += 足す値
+
++=演算子を使うと入力する文字数を減らせるため、キーの打ち間違いによるミスが減る。
+
+-->
