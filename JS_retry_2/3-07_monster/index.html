@@ -1,0 +1,68 @@
+<!--
+[コンソールでモンスターを倒せ！]〜回数が決まっていない繰り返し〜
+
+・ルールに沿って繰り返す
+1.体力100のモンスターがいて、プレイヤーはモンスターを倒さなければならない
+2.プレイヤーの攻撃力は1回につき30以下、毎回ランダムで決定する
+3.プレイヤーの攻撃力の数値だけ、モンスターの体力を減らす
+4.モンスターの体力が0以下になるまで、2と3を繰り返す
+
+はじめに、モンスターの体力を保存しておく変数を定義して、そこに100を代入する。
+次からが繰り返しで、まず、プレイヤーの攻撃力として30以下の整数をランダムで決めて、
+それをモンスターの体力とは別の変数に保存する。
+そして、モンスターの体力が0以下になるまで、「モンスターの体力 - プレイヤーの攻撃力」を繰り返す。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>3-07_monster</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+		<link href="../../_common/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>コンソールでモンスターを倒せ！</h1>
+				<h2>変数・定数の有効範囲１</h2>
+			</div><!-- /.container -->
+		</header>
+		<main>
+			<div class="container">
+				<section>
+				</section>
+			</div><!-- /.container -->
+		</main>
+		<footer>
+				<div class="container">
+					<p>JavaScript Samples</p>
+				</div><!-- /.container -->
+		</footer>
+		<script>
+			'use strict';
+
+			let enemy = 100;
+
+			window.alert('戦闘スタート！');
+
+			while(enemy > 0) {
+				const attack = Math.floor(Math.random() * 30) + 1;
+				console.log('モンスターに' + attack + 'のダメージ！');
+				enemy = enemy - attack;
+			}
+			console.log('モンスターを倒した！');
+		</script>
+	</body>
+</html>
+
+<!--
+[何回繰り返すか事前に決まっていない繰り返し]
+
+今回の繰り返しの条件式は以下のようにしている。
+/ while(enemy > 0) {
+この条件式は、変数enemyが0より大きいときtrueになる。
+つまり、モンスターの体力が0より大きければ、{~}内の処理が繰り返し実行される。
+-->
