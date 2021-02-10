@@ -1,0 +1,38 @@
+<!--
+[Progate]〜jQueryを学ぶ〜
+
+・jQueryの書き方
+jQueryの操作は直感的かつシンプル。
+①jQueryオブジェクトを作成
+②そのjQueryオブジェクトに対してメソッド(機能)を呼び出す
+というのが基本になる。
+jQueryはJSなので、文末にセミコロンが必要。
+/ $('セレクタ').メソッド(引数);
+
+・jQueryオブジェクト
+jQueryオブジェクトは、$('セレクタ')とするだけで作成できる。
+セレクタにはHTMLのタグ名やclass名などを指定し、それに合致したHTMLの要素がjQueryオブジェクトになる。
+
+・hideメソッド
+jQueryのメソッドはjQueryオブジェクトでしか利用できない。
+メソッドを使うと、jQueryオブジェクトの内容(HTMLの要素)を変更したり、アニメーションをつけたりできる。
+今回は要素を隠す「hide」というメソッドを使ってみる。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Progate</title>
+	  <link rel="stylesheet" type="text/css" href="stylesheet_other_1.css">
+	  <!-- jQueryの読み込み -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+	  <!--以下で、<h1>タグを用いて「Hello, World」と表示してください-->
+	  <h1>Hello,World</h1>
+	  <!-- script.jsの読み込み -->
+	  <script src="script_other_1.js"></script>
+
+	</body>
+</html>

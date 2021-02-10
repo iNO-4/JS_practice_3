@@ -1,0 +1,35 @@
+<!--
+・アニメーション付きで要素を隠す(1)
+hideメソッドに似たものとして「fadeOut」メソッドがある。
+fadeOutメソッドを用いると、要素を隠す際に、アニメーションを付けることができる。
+fadeOutメソッドは、後ろの()内に引数として、アニメーションの速度を指定できる。
+/ $('セレクタ').fadeOut();
+/ $('セレクタ').fadeOut(1500);
+L引数でアニメーションの速度を1500ミリ秒(1.5秒)に指定
+
+・アニメーション付きで要素を隠す(2)
+slideUpメソッドを用いても、アニメーション付きで要素を隠すことができる。
+また、slideUpメソッドも後ろの()内に引数として、アニメーションの速度を指定できる。
+/ $('セレクタ').slideUp();
+/ $('セレクタ').slideUp(1500);
+L引数でアニメーションの速度を1500ミリ秒(1.5秒)に指定
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Progate</title>
+	  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+	  <!--以下で、<img>タグを用いて画像を表示してください-->
+	  <img src="https://prog-8.com/images/html/beginner/wanko.jpg">
+	  <!--以下で、<p>タグを用いて「jQueryを学ぼう」と表示してください-->
+	  <p>jQueryを学ぼう</p>
+	  <script src="script_other_2.js"></script>
+
+	</body>
+</html>
