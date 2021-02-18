@@ -1,0 +1,40 @@
+<!--
+・classとid
+HTMLタグに名前を付ける方法として、classを用いた。これと同様にidというものがある。
+idはclassと同じように使うが、classとの違いとして、１つのページ内で同じid名を複数回使うことはできない。
+/ <ul id="list"> (同じidは一度しか使えない)
+	<li class="list-item">リスト１</li> (classは複数箇所で使える)
+	<li class="list-item">リスト２</li>
+  </ul>
+
+・classとidをセレクタにする
+classとidをセレクタにするには、CSSのセレクタと同様にclass名の前にはドット(.)、id名の前にはシャープ(#)を用いる。
+idは同一ページに一箇所しか存在しないため、jQueryが高速化される。
+jQueryのオブジェクトのセレクタはできるだけidを用いるようにする。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Progate</title>
+	  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+	  <!-- <h1>タグに"title"というidをつけてください -->
+	  <h1>jQueryの学習項目</h1>
+
+	  <div class="lessons">
+	    <!-- <div>タグに"lesson-item"というclassをつけてください -->
+	    <div>要素を隠す</div>
+
+	    <!-- <div>タグに"lesson-item"というclassをつけてください -->
+	    <div>要素を表示する</div>
+
+	  </div>
+
+	  <script src="script.js"></script>
+
+	</body>
+</html>
