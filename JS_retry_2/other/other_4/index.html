@@ -1,0 +1,44 @@
+<!--
+・隠れた要素を表示する
+隠れた要素を表示するメソッドとして、showメソッドがある。
+表示したい要素に対し、$('セレクタ').show();と指定することで隠れた要素を表示できる。
+hideメソッドとセットで覚えておく。
+/ (css)
+img{
+	display: none;
+}
+/ (js)
+$('img').show();
+
+・アニメーション付きで要素を表示
+fadeOutの反対としてfadeInメソッド、slideUpメソッドの反対としてslideDownメソッドがある。
+どちらもアヌメーション付きで隠れた要素を表示することができる。
+/ $('セレクタ').fadeIn();
+/ $('セレクタ').fadeIn('slow');
+L引数でアニメーションの速度を「ゆっくり」に指定
+/ $('セレクタ').slideDown();
+/ $('セレクタ').slideDown('slow');
+L引数でアニメーションの速度を「ゆっくり」に指定
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Progate</title>
+	  <link rel="stylesheet" type="text/css" href="stylesheet_other_4.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+
+	  <!-- <h1>タグに"title"というidをつけてください -->
+	  <h1 id="title">Progateへようこそ</h1>
+
+	  <!-- <img>タグに"image"というidをつけてください -->
+	  <img src="https://prog-8.com/images/html/beginner/wanko.jpg" id="image">
+
+	  <script src="script_other_4.js"></script>
+
+	</body>
+</html>
